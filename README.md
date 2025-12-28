@@ -54,7 +54,7 @@ Every agent in this portfolio follows the same core principles:
 These principles are implemented consistently across domains and agents.
 
 For a deeper explanation of the thinking behind this approach, see
-[`philosophy.md`](./docs/philosophy.md).
+[`philosophy.md`](https://github.com/AgidiMaro/reliable-ai-agents/blob/main/philosophy.md).
 
 ---
 
@@ -74,7 +74,7 @@ Key risks addressed:
 - Lack of auditability in incident response
 
 Repository:  
-https://github.com/AgidiMaro/Incident-Severity-Classification-Agent.git
+[`Incident severity classification agent`]https://github.com/AgidiMaro/Incident-Severity-Classification-Agent.git
 
 ---
 
@@ -93,7 +93,7 @@ Key risks addressed:
 - Opaque or non-reviewable hiring decisions
 
 Repository:  
-https://github.com/AgidiMaro/Hiring-Agent.git
+[`Hiring agent`]https://github.com/AgidiMaro/Hiring-Agent.git
 
 ---
 
