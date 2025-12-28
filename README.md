@@ -61,7 +61,7 @@ Key risks addressed:
 - Overreaction to noisy signals
 - Lack of auditability in incident response
 
-[Link to agent repository or demo]
+https://github.com/AgidiMaro/Incident-Severity-Classification-Agent.git
 
 ---
 
@@ -78,7 +78,7 @@ Key risks addressed:
 - Overconfident AI screening
 - Opaque hiring decisions
 
-[Link to agent repository or demo]
+https://github.com/AgidiMaro/Hiring-Agent.git
 
 ## What These Agents Demonstrate
 
