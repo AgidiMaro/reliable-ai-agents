@@ -1,136 +1,163 @@
-# Philosophy: Building Auditable AI Agents
+# Philosophy: How I Build Verifiable AI Agents
 
-This portfolio is guided by a simple belief:
+This portfolio is driven by a simple idea:
 
-> **AI systems used in high-stakes decisions should support human judgment, not replace it.**
+> **AI should make decisions easier to reach, not ultimately decide where they land.**
 
-As AI agents are increasingly applied to domains such as incident response, hiring,
-finance, and compliance, the most serious failures are rarely model accuracy issues.
-They are failures of governance, accountability, and design.
+As AI systems move beyond demos and into real workflows—incident response, hiring,
+financial decisions—the hardest problems today  are no longer about hallucination.
 
-This work explores how those failures can be avoided.
+They are about **auditability, accountability, and knowing where the AI stops**.
 
----
-
-## The Problem This Portfolio Addresses
-
-Many AI-powered systems today:
-- make decisions without being able to justify them
-- overstate confidence in ambiguous situations
-- blur accountability between humans and machines
-- cannot be audited or replayed after the fact
-
-In high-impact environments, these are not technical inconveniences.
-They are systemic risks.
-
-This portfolio is an attempt to design AI agents that are useful **without becoming unaccountable.**
+This work reflects how I think AI agents should be designed when the cost of being
+wrong actually matters.
 
 ---
 
-## Core Design Principles
+## The Problem I’m Trying to Solve
 
-Every agent in this portfolio follows the same non-negotiable principles.
+Many AI-enabled systems perform well technically, but struggle under basic audit
+questions such as:
 
-### 1. AI Does Not Decide
-Language models are powerful at extracting and summarizing information.
-They are not reliable decision-makers.
+- Can this decision be explained in plain terms?
+- What evidence did the system rely on?
+- Can the outcome be reproduced later?
+- Who is accountable if the decision is challenged?
 
-In these systems, AI is used strictly to extract facts from unstructured input.
-All decisions are made by deterministic, reviewable code.
+In high-risk environments, these are not theoretical concerns.
+They are control gaps.
 
----
-
-### 2. Decisions Must Be Explicit and Testable
-If a decision cannot be written as explicit logic, it cannot be audited.
-
-Decision rules are:
-- deterministic
-- versioned
-- unit-tested
-- visible in code
-
-This allows decisions to be challenged, reviewed, and improved over time.
+This portfolio is my attempt to design AI agents that remain **useful, reviewable,
+and defensible** under scrutiny.
 
 ---
 
-### 3. Evidence Is Mandatory
-Every fact used in a decision must point back to its source.
+## What I Mean by an “AI Agent”
 
-If a fact cannot be tied to evidence, it is not used.
+I describe these systems as *agents*, but not because they exercise independent
+judgment.
 
-This avoids hallucination-driven decisions and enables meaningful review.
+Their “agency” lies in **orchestrating a decision-ready state**, not in deciding
+outcomes.
 
----
+An agent’s role is to:
+- ingest unstructured inputs
+- extract and normalise relevant facts
+- surface evidence, assumptions, and uncertainty
+- prepare outputs that can be reviewed, challenged, and approved
 
-### 4. Uncertainty Triggers Escalation
-Uncertainty is not a bug. It is a signal.
-
-When inputs are missing, conflicting, or low-confidence, the correct response is not
-to guess, but to escalate to a human.
-
-Escalation is treated as a safety feature, not a failure.
-
----
-
-### 5. Humans Retain Accountability
-AI agents provide recommendations, not verdicts.
-
-A human decision-maker remains accountable for outcomes, especially in domains
-with ethical, legal, or financial consequences.
-
-This is reflected directly in system design, not added as a disclaimer.
+The agent does not decide.
+It supports **controlled decision-making**.
 
 ---
 
-## What This Portfolio Deliberately Avoids
+## Core Principles I Design Around
 
-These systems intentionally avoid:
+### 1. Separate What Is Probabilistic from What Is Deterministic
+
+AI is well suited to handling ambiguity and unstructured data.
+Control decisions are not.
+
+In every system I build:
+- The **model** performs probabilistic tasks such as extraction and summarisation
+- The **code** enforces deterministic, version-controlled decision logic
+- Humans retain accountability for the final outcome
+
+If a decision cannot be expressed clearly in deterministic logic, it is not yet
+ready to be automated.
+
+---
+
+### 2. Evidence-First by Design
+
+A recommendation without evidence is not auditable.
+
+Every fact used in a decision must:
+- be traceable back to source material
+- include verifiable references
+- be available for post-event review
+
+Where evidence is weak, missing, or contradictory, the system is designed to
+surface that risk rather than mask it.
+
+This supports traceability, challenge, and root-cause analysis.
+
+---
+
+### 3. Reviewability Is Built In
+
+Saying “a human is in the loop” is insufficient if the system does not support
+meaningful review.
+
+These agents do not return opaque scores.
+They return a **decision pack**:
+- extracted facts
+- supporting evidence
+- confidence signals
+- identified gaps or conflicts
+
+This reduces automation bias and enables informed approval, not rubber-stamping.
+
+---
+
+### 4. Uncertainty Is Treated as a Control Signal
+
+In traditional systems, uncertainty often appears as an error state.
+In auditable AI systems, it is a key risk indicator.
+
+Low confidence, conflicting signals, or incomplete inputs trigger escalation
+by design.
+
+Escalation is not a failure.
+It is a **control safeguard**.
+
+---
+
+### 5. Accountability Remains with Humans
+
+These agents provide recommendations, not determinations.
+
+In domains with ethical, legal, or financial impact, accountability must be
+explicit and human-owned.
+
+System design reflects this directly through audit logs, versioning, and
+decision traceability rather than relying on disclaimers.
+
+---
+
+## What I Deliberately Avoid
+
+Across this portfolio, I intentionally avoid:
 - end-to-end automation in high-risk decisions
-- opaque scoring models without explanation
-- free-form LLM reasoning as the source of truth
-- ranking people against each other
-- pretending that AI judgment is neutral or infallible
+- black-box scoring models without explainability
+- embedding decision logic inside LLM prompts
+- systems that cannot be independently reviewed or reproduced
 
-Avoidance is a design choice, not a limitation.
-
----
-
-## Why This Applies Across Domains
-
-Although the agents in this portfolio operate in different domains
-(incident management, hiring, and others), the underlying risks are the same:
-
-- overconfidence
-- lack of explainability
-- unclear ownership of decisions
-
-The same design principles apply regardless of domain.
-
-This portfolio demonstrates that reliable AI agents are not domain-specific inventions,
-but the result of disciplined system design.
+These are design choices aligned to control effectiveness, not technical limits.
 
 ---
 
-## How to Read This Portfolio
+## What This Portfolio Demonstrates
 
-Each agent repository:
-- applies these principles to a specific decision
-- defines an explicit decision contract
-- implements deterministic evaluation logic
-- logs decisions for audit and replay
+Although the agents in this portfolio operate in different domains,
+they share a common control philosophy.
 
-The agents are intentionally simple, bounded, and reviewable.
+Together, they demonstrate that:
+- reliable AI systems are designed, not improvised
+- auditability and usefulness are compatible
+- explainability supports better decisions, not slower ones
+- escalation is a strength, not a weakness
 
-Together, they form a reusable blueprint for building AI systems that can be trusted
-in real-world decision processes.
+The same approach applies whether the context is operational risk,
+hiring, or financial decision-making.
 
 ---
 
 ## Closing Thought
 
-AI systems do not fail because they are insufficiently intelligent.
+Most AI systems do not fail because the models are inadequate.
 
-They fail because they are insufficiently governed.
+They fail because decisions cannot be traced, reviewed, or defended.
 
-This portfolio is an exploration of what it looks like to build AI agents
-that know their limits.
+This portfolio reflects how I build AI agents that remain
+**auditable, explainable, and accountable** when scrutiny matters.
