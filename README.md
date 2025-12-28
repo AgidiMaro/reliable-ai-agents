@@ -73,8 +73,7 @@ Key risks addressed:
 - Overreaction to noisy or partial signals
 - Lack of auditability in incident response
 
-Repository:  
-[`Incident severity classification agent`](https://github.com/AgidiMaro/Incident-Severity-Classification-Agent.git).
+Repository: [`Incident severity classification agent`](https://github.com/AgidiMaro/Incident-Severity-Classification-Agent.git).
 
 ---
 
@@ -92,8 +91,7 @@ Key risks addressed:
 - Overconfident automated screening
 - Opaque or non-reviewable hiring decisions
 
-Repository:  
-[`Hiring agent`](https://github.com/AgidiMaro/Hiring-Agent.git).
+Repository:  [`Hiring agent`](https://github.com/AgidiMaro/Hiring-Agent.git).
 
 ---
 
