@@ -74,7 +74,7 @@ Key risks addressed:
 - Lack of auditability in incident response
 
 Repository:  
-[`Incident severity classification agent`]https://github.com/AgidiMaro/Incident-Severity-Classification-Agent.git
+[`Incident severity classification agent`](https://github.com/AgidiMaro/Incident-Severity-Classification-Agent.git).
 
 ---
 
@@ -93,7 +93,7 @@ Key risks addressed:
 - Opaque or non-reviewable hiring decisions
 
 Repository:  
-[`Hiring agent`]https://github.com/AgidiMaro/Hiring-Agent.git
+[`Hiring agent`](https://github.com/AgidiMaro/Hiring-Agent.git).
 
 ---
 
