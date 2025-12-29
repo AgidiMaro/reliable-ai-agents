@@ -95,6 +95,26 @@ Repository:  [`Hiring agent`](https://github.com/AgidiMaro/Hiring-Agent.git).
 
 ---
 
+### Credit & Loan Decisioning Agent
+**Domain:** Credit Risk & Responsible Lending  
+**Decision:** APPROVE · DECLINE · ESCALATE  
+
+This agent provides advisory decision support for credit and loan applications.
+AI is used strictly for fact extraction from financial documents, while all
+recommendations are produced by a deterministic, versioned policy engine.
+
+Uncertain or borderline cases are explicitly escalated to human credit officers.
+
+Key risks addressed:
+- Opaque or unchallengeable credit decisions
+- Overconfidence in automated affordability assessments
+- Inability to audit or replay lending outcomes
+- Poor handling of uncertainty in credit risk
+
+Repository:  
+[`Credit & Loan Decisioning Agent`](https://github.com/AgidiMaro/Credit-Loan-Decisioning-Agent.git)
+
+---
 ## What These Agents Demonstrate
 
 Taken together, these systems show that:
@@ -111,9 +131,9 @@ This pattern is reusable across regulated and high-impact environments.
 ## What Comes Next
 
 Future work may apply this same blueprint to domains such as:
-- credit and loan decisioning
 - transaction monitoring
 - regulatory compliance assessments
+- third-party and operational risk decisioning
 
 The underlying design philosophy will remain the same.
 
