@@ -112,7 +112,7 @@ Key risks addressed:
 - Poor handling of uncertainty in credit risk
 
 Repository:  
-[`Credit & Loan Decisioning Agent`](https://github.com/AgidiMaro/Credit-Loan-Decisioning-Agent.git)
+[`Credit & Loan Decisioning Agent`](https://github.com/AgidiMaro/Credit-Decision-Agent.git)
 
 ---
 ## What These Agents Demonstrate
